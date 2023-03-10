@@ -60,7 +60,7 @@ public class Salto : MonoBehaviour
     {
         if(collision.gameObject.layer == LayerMask.NameToLayer("ground"))
         {
-            Destroy(gameObject);
+            GetComponent<Collider>().isTrigger = true;
         }
 
         jumpAble = true;
